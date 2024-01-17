@@ -1,0 +1,13 @@
+C:\dev\test_AI\Test_buffered_analog_input\bin\Debug\Test_buffered_analog_input.exe.config
+C:\dev\test_AI\Test_buffered_analog_input\bin\Debug\Test_buffered_analog_input.exe
+C:\dev\test_AI\Test_buffered_analog_input\bin\Debug\Test_buffered_analog_input.pdb
+C:\dev\test_AI\Test_buffered_analog_input\bin\Debug\UeiDaqDNet.dll
+C:\dev\test_AI\Test_buffered_analog_input\obj\Debug\Test_buffered_analog_input.exe
+C:\dev\test_AI\Test_buffered_analog_input\obj\Debug\Test_buffered_analog_input.pdb
+C:\dev\test_AI\buffered_analog_input\bin\Debug\Test_buffered_analog_input.exe.config
+C:\dev\test_AI\buffered_analog_input\bin\Debug\Test_buffered_analog_input.exe
+C:\dev\test_AI\buffered_analog_input\bin\Debug\Test_buffered_analog_input.pdb
+C:\dev\test_AI\buffered_analog_input\bin\Debug\UeiDaqDNet.dll
+C:\dev\test_AI\buffered_analog_input\obj\Debug\Test_buffered_analog_input.exe
+C:\dev\test_AI\buffered_analog_input\obj\Debug\Test_buffered_analog_input.pdb
+C:\dev\test_AI\buffered_analog_input\obj\Debug\Test_buffered_analog_input.csprojResolveAssemblyReference.cache

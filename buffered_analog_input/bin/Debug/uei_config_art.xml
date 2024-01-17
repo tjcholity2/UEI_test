@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This is a generated file.-->
+<UEI>
+  <GlobalSettings>
+    <Setting name="ART" value="KC-46" />
+    <Setting name="useDebugWindow" value="false" />
+    <Setting name="useUeiWatchdogFeature" value="true" />
+    <Setting name="logUeiWatchdogFeatureTimerResets" value="true" />
+    <Setting name="logUeiCallsToReadHardware" value="false" />
+    <Setting name="profileInLogger" value="0" />
+    <Setting name="boom_max_servo_extend_voltage" value="1.7" />
+    <Setting name="boom_max_servo_retract_voltage" value="-1.7" />
+    <Setting name="boom_min_control_voltage" value="1.5" />
+    <Setting name="boom_max_extension_feet" value="21.5" />
+    <Setting name="boom_max_extension_feet_for_hoist_min" value="8.0" />
+    <Setting name="boom_telescope_control_stick_extend" value="2.30" />
+    <Setting name="boom_telescope_control_stick_center" value="3.12" />
+    <Setting name="boom_telescope_control_stick_center_deadzone" value="0.16" />
+    <Setting name="boom_telescope_control_stick_retract" value="4.00" />
+    <Setting name="boom_length_sensor_adj_zero_position" value="5.74" />
+    <Setting name="boom_length_sensor_adj_foot_multiplier" value="-3.900" />
+    <Setting name="boom_length_model_adj" value="-0.50" />
+    <Setting name="boom_hoist_sensor_max" value="5.333" />
+    <Setting name="boom_hoist_sensor_min" value="3.361" />
+    <Setting name="boom_hoist_sensor_max_for_normal_boom_motion" value="4.285" />
+    <Setting name="boom_hoist_sensor_min_for_normal_boom_motion" value="3.650" />
+    <Setting name="boom_hoist_model_value_at_sensor_min" value="0.8" />
+    <Setting name="cds_hose_feet_per_second" value="1.5" />
+    <Setting name="cds_hose_stow_pos_offset_feet" value="0.0" />
+    <Setting name="CubeIPaddresses" value="172.16.[[Room]].110,172.16.[[Room]].111,172.16.[[Room]].112,172.16.[[Room]].113,172.16.[[Room]].114" />
+    <Setting name="CubeNames" value="AROS,WARP,CDS,BOOM_1,BOOM_2" />
+  </GlobalSettings>
+  <DortSettings>
+    <Setting name="pingIPAddress" value="172.16.[[Room]].11" computer="IOS_PC" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].12" computer="IMI_PC" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].13" computer="FDA_PC_01" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].14" computer="FDA_PC_02" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].17" computer="Portable_IOS" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].110" computer="UEI Cube AROS" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].111" computer="UEI Cube WARP" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].112" computer="UEI Cube CDS" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].113" computer="UEI Cube 1 Boom" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].114" computer="UEI Cube 2 Boom" />
+    <Setting name="pingIPAddress" value="172.16.[[Room]].119" computer="WebPowerSw AROS" />
+  </DortSettings>
+  <CdsFaultGuidance>
+    <Setting name="cdsCableConnectorOpenFault" value="Check for a loose CDS connector." />
+    <Setting name="torqueControlFault" value="Check if hydraulic pressure > 2900 PSI" />
+  </CdsFaultGuidance>
+  <model name="UEI_AROS_IO_1" subsystemType="DI" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].110/dev0/di0:1" lowerInputLimit="10" upperInputLimit="18" />
+    <datapoint name="225010012.D08_CB" owner="UEI_AROS_IO_1" comment="ARO PAN DISP PRI (L) - D08" channel="0" bit="0" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.D07_CB" owner="UEI_AROS_IO_1" comment="ARO LARGE DISP PRI - D07" channel="0" bit="1" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.D09_CB" owner="UEI_AROS_IO_1" comment="ARO PAN DISP PRI (C) - D09" channel="0" bit="2" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.D10_CB" owner="UEI_AROS_IO_1" comment="ARO PAN DISP PRI (R) - D10" channel="0" bit="3" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.D11_CB" owner="UEI_AROS_IO_1" comment="ARO ARODCU PRI - D11" channel="0" bit="4" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.B01_CB" owner="UEI_AROS_IO_1" comment="ARO LARGE DISP SEC - B01" channel="0" bit="5" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.B02_CB" owner="UEI_AROS_IO_1" comment="ARO PAN DISP SEC (L) - B02" channel="0" bit="6" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.B03_CB" owner="UEI_AROS_IO_1" comment="ARO PAN DISP SEC (C) - B03" channel="0" bit="7" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.B04_CB" owner="UEI_AROS_IO_1" comment="ARO PAN DISP SEC (R) - B04" channel="0" bit="8" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.B05_CB" owner="UEI_AROS_IO_1" comment="ARO ARODCU SEC - B05" channel="0" bit="9" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010012.A08_CB" owner="UEI_AROS_IO_1" comment="DROGUE CNTRL PNL ARO - A08" channel="0" bit="10" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="225010018.AROS_LIGHTING_ACMC_LIGHTING_Knob" owner="UEI_AROS_IO_1" channel="0" bit="12" bits="4" outType="bcd_to_enum" conv="2,3,0,0,1,1,1,1,1,1,2,2,2,2,2,2" nominal="0" dort="1" invert="true" />
+    <datapoint name="225010018.AROS_LIGHTING_ANNUNCIATOR_Knob" owner="UEI_AROS_IO_1" comment="starts line pin 16" channel="0" bit="17" bits="2" outType="binary_to_enum" conv="1,2,0" nominal="0" dort="1" invert="true" />
+    <datapoint name="225010019.AROS_CONTROLS_POSITION_KNOB" owner="UEI_AROS_IO_1" channel="0" bit="19" bits="3" outType="binary_to_enum" conv="0,2,0,1" nominal="0" dort="1" invert="true" />
+    <datapoint name="225010019.AROS_CONTROLS_POWER_Button" owner="UEI_AROS_IO_1" channel="0" bit="22" outType="binary" nominal="False" dort="2" invert="true" momentary="true" />
+    <datapoint name="225010019.AROS_CONTROLS_POWER_Button_Cover" owner="UEI_AROS_IO_1" channel="0" bit="22" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020004.ARMS_CONTROLS_ARMS_RESET_Button" owner="UEI_AROS_IO_1" channel="0" bit="23" outType="binary" nominal="False" dort="2" />
+    <datapoint name="225020007.225020007_Button" owner="UEI_AROS_IO_1" comment="Up arrow button on AROCDU bezel" channel="1" bit="24" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020007.BRIGHT_Button" owner="UEI_AROS_IO_1" comment="Brightness button on AROCDU bezel" channel="1" bit="25" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020007.DISPLAY_Button" owner="UEI_AROS_IO_1" comment="Power button on AROCDU bezel" channel="1" bit="26" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020007.ARROW_DOWN_Button" owner="UEI_AROS_IO_1" comment="Down arrow button on AROCDU bezel" channel="1" bit="27" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020015.CAMSEL_Button" owner="UEI_AROS_IO_1" comment="IR / Visible selection" channel="1" bit="28" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020015.VIEWSEL_Button" owner="UEI_AROS_IO_1" comment="Left / Right selection" channel="1" bit="29" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020015.MODESELECT_Knob" owner="UEI_AROS_IO_1" comment="Five position Primary Display Image Mode Select" channel="1" bit="30" bits="5" outType="binary_to_enum" conv="0,1,0,4,3,2" nominal="0" dort="1" invert="true" />
+    <datapoint name="UEI_CONFIG_NIB" owner="UEI_AROS_IO_1" comment="configuration nibble 10A, 9B, 8C, 6D, 5E (cholity: what is this used for?)" channel="1" bit="35" bits="4" outType="binary" nominal="False" dort="2" />
+    <datapoint name="225020025.RADIO_PTT_BUTTON" owner="UEI_AROS_IO_1" comment="AROS console middle foot button" channel="1" bit="46" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="UEI_AROS_FOOT_BOOM_INTERPHONE_PTT_BUTTON" owner="UEI_AROS_IO_1" comment="AROS console right foot button" channel="1" bit="47" outType="binary" nominal="False" dort="1" invert="true" />
+  </model>
+  <model name="UEI_AROS_IO_2" subsystemType="DO" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].110/dev1/do0" />
+    <datapoint name="225020002.BOOM_CONTROLS_ENV_LIMITS_Off_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="0" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_ENV_LIMITS_Active_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="1" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_TLSCP_AT_DISC_Man_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="2" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_TLSCP_AT_DISC_Auto_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="3" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225010019.POWER_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="5" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020004.ARMS_CONTROLS_ARMS_RESET_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="7" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020015.CAMSEL_Bottom_LIGHT" owner="UEI_AROS_IO_2" comment="&quot;VISIBLE&quot; is illuminated on bottom" channel="0" bit="9" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020015.CAMSEL_Top_LIGHT" owner="UEI_AROS_IO_2" comment="&quot;IR&quot; is illuminated on top" channel="0" bit="10" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020015.VIEWSEL_Bottom_LIGHT" owner="UEI_AROS_IO_2" comment="&quot;RIGHT&quot; is illuminated on bottom" channel="0" bit="11" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020015.VIEWSEL_Top_LIGHT" owner="UEI_AROS_IO_2" comment="&quot;LEFT&quot; is illuminated on top" channel="0" bit="12" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_STOWED_DEPLOYED_Dplyed_LIGHT" owner="UEI_AROS_IO_2" comment="DPLYED is illuminated on bottom" channel="0" bit="13" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_STOWED_DEPLOYED_Stowed_LIGHT" owner="UEI_AROS_IO_2" comment="STOWED is illuminated on top" channel="0" bit="14" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020003.3D_IR_WHITE_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="15" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020003.3D_IR_BLACK_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="16" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020003.3D_NUC_NUC_LIGHT" owner="UEI_AROS_IO_2" channel="0" bit="17" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225010019.POWER_LIGHT" owner="UEI_AROS_IO_2" comment="relay gives power to utility light" channel="0" bit="20" outType="binary" nominal="False" dort="1" />
+    <datapoint name="UEI_AROS_TELESCOPE_CNTRL_STICK_EXTEND_RETRACT_MOTOR_RELAY" owner="UEI_AROS_IO_2" channel="0" bit="22" outType="binary" nominal="False" dort="0" />
+    <datapoint name="AROS.ExhaustFanB1190" owner="UEI_AROS_IO_2" comment="relay for power to fan" channel="0" bit="24" outType="binary" nominal="False" dort="1" />
+  </model>
+  <model name="UEI_AROS_IO_4" subsystemType="DI" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].110/dev3/di0:1" lowerInputLimit="10" upperInputLimit="18" />
+    <datapoint name="225020002.BOOM_LIGHTING_MARKER_Knob" owner="UEI_AROS_IO_4" channel="0" bit="6" bits="4" outType="bcd_enum_to_float" conv="2,3,4,5,6,7,8,9,10,11,0,1:1.0" nominal="0.4545455" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_ENV_LIMITS_Button" owner="UEI_AROS_IO_4" comment="BOOM LIGHTING CNTRL ENV LIMITS" channel="0" bit="10" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020002.BOOM_CONTROLS_TLSCP_AT_DISC_Button" owner="UEI_AROS_IO_4" comment="BOOM LIGHTING CNTRL TLSCP" channel="0" bit="11" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020003.3D_IR_Button" owner="UEI_AROS_IO_4" comment="3D Cameras Control Panel" channel="0" bit="14" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020003.SCENE_Knob" owner="UEI_AROS_IO_4" comment="3D Cameras Control Panel" channel="0" bit="15" bits="4" outType="bcd_enum_to_float" conv="2,10,6,0,4,0,8,0,3,0,7,0,5,1,9,0:1.0" nominal="0.4" dort="1" />
+    <datapoint name="225020003.3D_NUC_BUTTON" owner="UEI_AROS_IO_4" comment="3D Cameras Control Panel" channel="0" bit="19" outType="binary" nominal="False" dort="1" />
+    <!-- <datapoint name="225020011.MICICS_Knob" owner="UEI_AROS_IO_4" comment="assume FLIGHT CONTROL STICK COMMUN SW CONT (not in schematic)" channel="0" bit="20" bits="4" outType="binary_to_enum" conv="3,2,0,1" nominal="3" dort="2" /> -->
+    <datapoint name="225020010.4WayThumb_4wrocker" owner="UEI_AROS_IO_4" comment="assume PILOT DIRECTOR LT CNT" channel="1" bit="24" bits="4" outType="binary_to_enum" conv="3,2,0,1,4" nominal="3" dort="1" invert="true" />
+    <datapoint name="225020010.FUEL_Button" owner="UEI_AROS_IO_4" comment="FUEL OFF LOAD" channel="1" bit="28" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020010.RESET_Button" owner="UEI_AROS_IO_4" comment="RESET TO READY" channel="1" bit="29" outType="binary" nominal="False" dort="1" />
+    <datapoint name="225020010.CONTACT_Button" owner="UEI_AROS_IO_4" comment="MANUAL CONTACT MADE" channel="1" bit="30" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020010.EMERGENCY_RETRACTION_switch" owner="UEI_AROS_IO_4" comment="Activates when telescoping control pulled all the way back." channel="1" bit="31" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020010.BRKWY_Button" owner="UEI_AROS_IO_4" comment="BREAKAWAY SWITCH" channel="1" bit="32" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="UEI_Communications_switch_1ST_radio" owner="UEI_AROS_IO_4" comment="MIC position on FLIGHT CONTROL STICK" channel="1" bit="33" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="UEI_Communications_switch_2ND_INPT" owner="UEI_AROS_IO_4" comment="ICS position on FLIGHT CONTROL STICK" channel="1" bit="34" outType="binary" nominal="False" dort="1" invert="true" />
+    <datapoint name="225020011.Trigger" owner="UEI_AROS_IO_4" comment="ON FLIGHT CONTROL STICK" channel="1" bit="35" bits="2" outType="bcd_to_enum" conv="0,1,2,2" nominal="0" dort="1" invert="true" />
+  </model>
+  <model name="UEI_AROS_IO_5" subsystemType="AIX" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].110/dev4/ai0:1" inputMode="diff" tolerance="0.08" exciteV="1" exciteF="3000" />
+    <datapoint name="225020010.225020010" owner="UEI_AROS_IO_5" comment="TELESCOPING CONTROL STICK enumeration - sends out datapoint to IMI model" channel="0" outType="analog_to_enum" conv="2,0,1" nominal="0" dort="0" lowerInputLimit="2.2" upperInputLimit="4.2" />
+    <datapoint name="UEI_Relative_Resolver_CHA" owner="UEI_AROS_IO_5" comment="TELESCOPING CONTROL STICK float - raw sensor value" channel="0" outType="angle" nominal="3.1" dort="1" lowerInputLimit="0" upperInputLimit="6" />
+    <datapoint name="FuelARO.aroECU_Power" owner="UEI_AROS_IO_5" comment="Disables channel in case control disconnected to avoid flood of noise messages" channel="0" outType="channelEnable" />
+  </model>
+  <model name="WebPowerSw_AROS_IO_6" subsystemType="WEBPOWERSWITCH">
+    <channelConfig resourceString="172.16.[[Room]].119/user:admin/pw:1234" />
+    <datapoint name="FuelARO.aroPanDispL_Power" owner="WebPowerSw_AROS_IO_6" comment="Plug 1 - ARO PAN DISP (L)" address="1" outType="binary" nominal="0" dort="1" />
+    <datapoint name="FuelARO.aroPanDispC_Power" owner="WebPowerSw_AROS_IO_6" comment="Plug 2 - ARO PAN DISP (C)" address="2" outType="binary" nominal="0" dort="1" />
+    <datapoint name="FuelARO.aroPanDispR_Power" owner="WebPowerSw_AROS_IO_6" comment="Plug 3 - ARO PAN DISP (R)" address="3" outType="binary" nominal="0" dort="1" />
+    <datapoint name="FuelARO.aroLargeDispPower" owner="WebPowerSw_AROS_IO_6" comment="Plug 4 - ARO Large DISP " address="4" outType="binary" nominal="0" dort="1" />
+    <datapoint name="FuelARO.aroCduDisp_Power" owner="WebPowerSw_AROS_IO_6" comment="Plug 5 - ARO ARODCU DISP" address="5" outType="binary" nominal="0" dort="1" />
+  </model>
+  <model name="UEI_WARP_IO_1" subsystemType="DI" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].111/dev0/di0" />
+    <datapoint name="WARP.SYSTEM PRESENT" owner="UEI_WARP_IO_1" comment="Signal from WARP seen when connected via W8731 and 4W101" channel="0" bit="0" bits="0" outType="binary" nominal="True" dort="0" />
+    <datapoint name="WARP.DROGUE STOWED SIGNAL" owner="UEI_WARP_IO_1" comment="Signal from WARP" channel="0" bit="1" bits="0" outType="binary" nominal="True" dort="0" />
+    <datapoint name="WARP.HOSE JETTISON STATUS" owner="UEI_WARP_IO_1" comment="Signal from WARP" channel="0" bit="2" bits="0" outType="binary" nominal="True" dort="0" />
+  </model>
+  <model name="UEI_WARP_IO_2" subsystemType="DO" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].111/dev1/do0" />
+    <datapoint name="WARP.DC_POWER_RELAY" owner="UEI_WARP_IO_2" comment="dc power relay" channel="0" bit="0" bits="0" outType="binary" nominal="False" dort="0" />
+    <datapoint name="WARP.HOLDUP_POWER" owner="UEI_WARP_IO_2" comment="warp holdup power" channel="0" bit="1" bits="0" outType="binary" nominal="False" dort="0" />
+    <!-- <datapoint name="225010014.DROGUE_JETTISON_ARM_Left_ARM_LIGHT" owner="UEI_WARP_IO_2" comment="warp jettison power - DO NOT activate" channel="0" bit="2" bits="0" outType="binary" nominal="False" dort="0" /> -->
+    <datapoint name="WARP.AC_POWER_RELAY" owner="UEI_WARP_IO_2" comment="warp 3 phase AC power" channel="0" bit="3" bits="0" outType="binary" nominal="False" dort="0" />
+  </model>
+  <model name="UEI_WARP_IO_3" subsystemType="ARINC" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].111/Dev2/ARX0" channel="0" speed="BitsPerSecond100000" />
+    <datapoint name="WARP.RXArinc" owner="UEI_WARP_IO_3" comment="warp left side arinc receive" channel="0" outType="arinc" dort="0" />
+    <datapoint name="WARP.RightXmitArinc" owner="UEI_WARP_IO_3" comment="warp right side arinc xmit" channel="0" outType="arinc" dort="0" />
+    <datapoint name="WARP.LeftXmitArinc" owner="UEI_WARP_IO_3" comment="warp left side arinc xmit" channel="0" outType="arinc" dort="0" />
+    <datapoint name="function" owner="UEI_WARP_IO_3" comment="string messages in via training portal" channel="0" outType="arinc" dort="0" />
+  </model>
+  <model name="UEI_CDS_IO_1" subsystemType="DI" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].112/dev0/di0:1" lowerInputLimit="10" upperInputLimit="18" />
+    <datapoint name="CDS.D4391P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="0" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.AP DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="1" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4392P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="2" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.BP DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="3" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4390P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="4" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.BS DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="5" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4395P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="6" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.AS DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="7" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.G1 DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="8" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4393P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="9" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.DrogueStowedSw1" owner="UEI_CDS_IO_1" channel="0" bit="10" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.G2 DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="11" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4394P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="12" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.DrogueStowedSw2" owner="UEI_CDS_IO_1" channel="0" bit="13" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D20022 DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="14" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4396P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="15" outType="binary" nominal="False" dort="0" />
+    <datapoint name="CDS.D20023 DISCONNECTED PROVISIONAL" owner="UEI_CDS_IO_1" channel="0" bit="16" outType="binary" nominal="void" dort="0" />
+    <datapoint name="CDS.D4397P_DISCONNECTED" owner="UEI_CDS_IO_1" channel="0" bit="17" outType="binary" nominal="False" dort="0" />
+    <datapoint name="CDS.L_RewindMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 1 rewind signal - true with cap on" channel="0" bit="18" outtype="binary" nominal="True" dort="2" invert="true" />
+    <datapoint name="CDS.L_TrailMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 1 trail signal - true with cap on" channel="0" bit="19" outtype="binary" nominal="True" dort="2" invert="true" />
+    <datapoint name="CDS.L_GNDInterlockMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 1 - false with cap on (true with cap off = maint mode)" channel="0" bit="20" outtype="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.L_BootMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 1 - false with cap on" channel="0" bit="21" outtype="binary" nominal="True" dort="0" />
+    <datapoint name="CDS.HydMtrValveOpenTellback" owner="UEI_CDS_IO_1" comment="Hose drum hydraulic valve is open - this DI is not working" channel="1" bit="24" outType="binary" nominal="True" dort="0" />
+    <datapoint name="CDS.DrumLatchTellback" owner="UEI_CDS_IO_1" comment="Hose drum latch is released when true" channel="1" bit="25" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.DrumBrakeTellback" owner="UEI_CDS_IO_1" comment="Hose drum brake is released - this DI is not working" channel="1" bit="26" outType="binary" nominal="True" dort="0" />
+    <datapoint name="CDS.R_RewindMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 2 rewind signal - true with cap on" channel="1" bit="30" outType="binary" nominal="True" dort="2" invert="true" />
+    <datapoint name="CDS.R_TrailMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 2 trail signal - true with cap on" channel="1" bit="31" outType="binary" nominal="True" dort="2" invert="true" />
+    <datapoint name="CDS.R_GNDInterlockMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 2 - false with cap on (true with cap off = maint mode)" channel="1" bit="32" outType="binary" nominal="False" dort="2" />
+    <datapoint name="CDS.R_BootMaint" owner="UEI_CDS_IO_1" comment="CDS ground umbilical connector to RCU 2 - false with cap on" channel="1" bit="33" outType="binary" nominal="True" dort="0" />
+  </model>
+  <model name="UEI_CDS_IO_2" subsystemType="DO" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].112/dev1/do0" />
+    <datapoint name="CDS.DrumLatchDrive" owner="UEI_CDS_IO_2" channel="0" bit="0" outType="binary" nominal="False" dort="0" />
+    <datapoint name="CDS.DrumBrakeDrive" owner="UEI_CDS_IO_2" channel="0" bit="1" outType="binary" nominal="False" dort="0" />
+    <datapoint name="CDS.HydIsoValveSupply" owner="UEI_CDS_IO_2" channel="0" bit="2" outType="binary" nominal="False" dort="0" />
+  </model>
+  <model name="UEI_CDS_IO_3" subsystemType="AI" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].112/dev2/ai0:2" lowerInputLimit="-10" upperInputLimit="10" inputMode="diff" tolerance="0.01" />
+    <!-- <datapoint name="CDS.HoseReelHydPressure" owner="UEI_CDS_IO_3" comment="Supply pressure sensor on CDS (GFE) - not used" channel="0" outType="analog" nominal="0" dort="0" /> -->
+    <datapoint name="CDS.HosePositionStatus" owner="UEI_CDS_IO_3" comment="HPVS position" channel="1" outType="distance" conv="1.5" nominal="0" dort="0" collectiveLimit="209" spatialLimit="277" />
+    <datapoint name="HYDCAB.CdsHoseReelPower" owner="UEI_CDS_IO_3" comment="Disables channel in case cable disconnected to avoid flood of noise messages" channel="1" outType="channelEnable" />
+    <datapoint name="CDS.HoseVelocityStatus" owner="UEI_CDS_IO_3"  comment="HPVS velocity" channel="2" outType="distance" conv="1.5" nominal="0" dort="0" collectiveLimit="209" spatialLimit="277" />
+    <datapoint name="HYDCAB.CdsHoseReelPower" owner="UEI_CDS_IO_3" comment="Disables channel in case cable disconnected to avoid flood of noise messages" channel="2" outType="channelEnable" />
+    <!-- <datapoint name="CDS.InputHydPressure" owner="UEI_CDS_IO_3" comment="Supply pressure trainer inlet - not used" channel="6" outType="analog" nominal="0" dort="0" /> -->
+  </model>
+  <model name="UEI_CDS_IO_4" subsystemType="ARINC" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].112/Dev3/ARX0:1" speed="BitsPerSecond12500" />
+    <datapoint name="CDS.DCU_RXArinc" owner="UEI_CDS_IO_4" comment="CDS Digital Control Unit (DCU) arinc receive" channel="0" outType="arinc" dort="0" />
+    <datapoint name="CDS.DSC_XmitArinc" owner="UEI_CDS_IO_4" comment="CDS Digital Control Unit (DCU) arinc xmit" channel="0" outType="arinc" dort="0" />
+    <datapoint name="CDS.DCU_Chan0tx_monitor" owner="UEI_CDS_IO_4" comment="CDS Digital Control Unit (DCU) arinc receive" channel="1" outType="arinc" dort="0" />
+    <datapoint name="function" owner="UEI_CDS_IO_4" comment="string messages in via training portal" channel="0" outType="arinc" dort="0" />
+  </model>
+  <model name="UEI_Boom_IO_1" subsystemType="DI" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].113/dev0/di0:1" lowerInputLimit="10" upperInputLimit="18" />
+    <datapoint name="BOOM.LatchUnlockStatus" owner="UEI_Boom_IO_1" comment="LATCH_ACTUATOR_UNLOCK_STATUS" channel="0" bit="0" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="BOOM.LatchLockStatus" owner="UEI_Boom_IO_1" comment="LATCH_ACTUATOR_LOCK_STATUS (may be like a home)" channel="0" bit="1" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="BOOM.NotStowedStatus" owner="UEI_Boom_IO_1" comment="BOOM_STOW_SWITCH_BOOM_NOT_STOWED" channel="0" bit="2" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="BOOM.StowedStatus" owner="UEI_Boom_IO_1" comment="BOOM_STOW_SWITCH_BOOM_STOWED" channel="0" bit="3" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HOIST.UnlatchedLimitStatus" owner="UEI_Boom_IO_1" comment="LATCH_POSITION_SWITCH_UNLATCHED_LIMIT" channel="0" bit="4" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HOIST.NotUnlatchedLimitStatus" owner="UEI_Boom_IO_1" comment="LATCH_POSITION_SWITCH_NOT_UNLATCHED_LIMIT" channel="0" bit="5" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HOIST.LatchedLimitStatus" owner="UEI_Boom_IO_1" comment="LATCH_POSITION_SWITCH_LATCHED_LIMIT" channel="0" bit="6" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HOIST.NotLatchedLimitStatus" owner="UEI_Boom_IO_1" comment="LATCH_POSITION_SWITCH_NOT_LATCHED_LIMIT" channel="0" bit="7" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="BOOM.NotRetractedStatus" owner="UEI_Boom_IO_1" comment="TELESCOPE_RETACT_SWITCH_NOT_FULLY_RETRACTED" channel="0" bit="8" outType="binary" nominal="False" dort="0" />
+    <datapoint name="BOOM.RetractedStatus" owner="UEI_Boom_IO_1" comment="TELESCOPE_RETACT_SWITCH_FULLY_RETRACTED" channel="0" bit="9" outType="binary" nominal="True" dort="1" />
+    <datapoint name="boom_hoist_service_module.connected" owner="UEI_Boom_IO_1" comment="SERVICE_MODULE connected" channel="0" bit="10" outType="binary" nominal="void" dort="0" />
+    <datapoint name="BOOM.CameraLeftConnectorJ1" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_023 detect cable disconnect" channel="0" bit="12" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="BOOM.CameraLeftConnectorJ2" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_023 detect cable disconnect - not working" channel="0" bit="13" outType="binary" nominal="True" dort="0" />
+    <datapoint name="BOOM.CameraRightConnectorJ1" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_023 detect cable disconnect - not working" channel="0" bit="14" outType="binary" nominal="True" dort="0" />
+    <datapoint name="BOOM.CameraRightConnectorJ2" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_023 detect cable disconnect" channel="0" bit="15" outType="binary" nominal="True" dort="1" invert="true" />
+    <datapoint name="BARCS.DoorActuatorLeftLimitSw1" owner="UEI_Boom_IO_1" comment="BARCS door actuator left limit switch 1" channel="0" bit="18" outType="binary" nominal="void" dort="0" />
+    <datapoint name="BARCS.DoorActuatorLeftLimitSw2" owner="UEI_Boom_IO_1" comment="BARCS door actuator left limit switch 2" channel="0" bit="19" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="BARCS.DoorActuatorRightLimitSw1" owner="UEI_Boom_IO_1" comment="BARCS door actuator right limit switch 1" channel="0" bit="20" outType="binary" nominal="void" dort="0" />
+    <datapoint name="BARCS.DoorActuatorRightLimitSw2" owner="UEI_Boom_IO_1" comment="BARCS door actuator right limit switch 2" channel="0" bit="21" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="BOOM.InputHydFilterClogged" owner="UEI_Boom_IO_1" comment="Filter clogged - telescope inline" channel="0" bit="22" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HOIST.InputHydFilterClogged" owner="UEI_Boom_IO_1" comment="Filter clogged - hoist inline" channel="0" bit="23" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HOIST.clutch_position" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_004" channel="1" bit="24" outType="binary" nominal="void" dort="0" />
+    <datapoint name="boom_hoist_service_module.hoistControl_SWITCH" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_017 MANUAL position - true when sw up " channel="1" bit="25" bits="1" outType="binary_to_enum" conv="0,1" nominal="0" dort="0" />
+    <datapoint name="boom_hoist_service_module.latchRelease_SWITCH" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_017 lock = bit 26, unlock = 27" channel="1" bit="26" bits="2" outType="binary_to_enum" conv="0,2,1" nominal="0" dort="0" />
+    <datapoint name="boom_hoist_service_module.raiseLower_SWITCH" owner="UEI_Boom_IO_1" comment="On electrical drawing 16184529_017 raise= bit 28, lower = 29" channel="1" bit="28" bits="2" outType="binary_to_enum" conv="0,2,1" nominal="0" dort="0" />
+    <datapoint name="HYDCAB.ModeSelectorRemote" owner="UEI_Boom_IO_1" channel="1" bit="31" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.ModeSelectorOff" owner="UEI_Boom_IO_1" channel="1" bit="32" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.ModeSelectorLocal" owner="UEI_Boom_IO_1" channel="1" bit="33" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.PhaseSequenceOrLoss" owner="UEI_Boom_IO_1" comment="Warning" channel="1" bit="34" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HYDCAB.MotorControlOverload" owner="UEI_Boom_IO_1" comment="Warning" channel="1" bit="35" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HYDCAB.MotorPumpRunning" owner="UEI_Boom_IO_1" comment="Informational" channel="1" bit="36" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.PressureAvailable" owner="UEI_Boom_IO_1" comment="informational" channel="1" bit="40" outtype="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.DifferentialPressure" owner="UEI_Boom_IO_1" comment="Informational" channel="1" bit="41" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.PowerAvailable" owner="UEI_Boom_IO_1" comment="Informational" channel="1" bit="42" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.HighTemp" owner="UEI_Boom_IO_1" comment="Warning" channel="1" bit="43" outType="binary" nominal="void" dort="0" />
+    <datapoint name="HYDCAB.LowFluid" owner="UEI_Boom_IO_1" comment="Warning" channel="1" bit="44" outType="binary" nominal="void" dort="0" invert="true" />
+    <datapoint name="HYDCAB.HighPressure" owner="UEI_Boom_IO_1" comment="Warning" channel="1" bit="45" outType="binary" nominal="void" dort="0" invert="true" />
+  </model>
+  <model name="UEI_Boom_IO_2" subsystemType="DO" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].113/dev1/do0" />
+    <datapoint name="HOIST.rightUpDn" owner="UEI_Boom_IO_2" comment="Hoist hyd direction coil (relay XK1)" channel="0" bit="0" outType="binary" nominal="False" dort="0" />
+    <datapoint name="HOIST.rightUpDnActive" owner="UEI_Boom_IO_2" comment="Hoist hyd enable coil (relay XK2)" channel="0" bit="1" outType="binary" nominal="False" dort="0" />
+    <!-- <datapoint name="HOIST.leftClutchSOV" owner="UEI_Boom_IO_2" comment="NOT USED - Hoist hyd clutch coil (disconnects reel from hoist motor) (relay XK3)" channel="0" bit="2" outType="binary" nominal="False" dort="0" /> -->
+    <!-- <datapoint name="HOIST.leftTensionSOV" owner="UEI_Boom_IO_2" comment="NOT USED - Hoist tension coil (activate) (relay XK4)" channel="0" bit="3" outType="binary" nominal="False" dort="0" /> -->
+    <datapoint name="BOOM.NozzleContactDiscSignal" owner="UEI_Boom_IO_2" comment="DO for relay to apply 28VDC for signal to nozzle tester." channel="0" bit="2" outType="pulse" delayTimeMs="10.0" pulseTimeMs="1.0" nominal="0" dort="0" />
+    <datapoint name="HOIST.LatchDirection" owner="UEI_Boom_IO_2" comment="Latch actuator direction (relay XK6)" channel="0" bit="4" outType="binary" nominal="False" dort="0" />
+    <datapoint name="HOIST.LatchDrive" owner="UEI_Boom_IO_2" comment="Latch actuator power (relay XK5)" channel="0" bit="5" outType="binary" nominal="False" dort="0" />
+    <datapoint name="BOOM.centerSOV" owner="UEI_Boom_IO_2" comment="Telescope hyd valve (normal mode)(relay XK7)" channel="0" bit="6" outType="binary" nominal="False" dort="0" />
+    <datapoint name="BOOM.centerReverse" owner="UEI_Boom_IO_2" comment="Telescope signal voltage reverser relay (relay XK8)" channel="0" bit="7" outType="binary" nominal="False" dort="0" />
+    <datapoint name="boom_hoist_service_module.latched_LEDLIGHT" owner="UEI_Boom_IO_2" comment="SERVICE_MODULE_LATCH_LATCHED_LAMP" channel="0" bit="8" outType="binary" nominal="1" dort="2" />
+    <datapoint name="boom_hoist_service_module.unlatched_LEDLIGHT" owner="UEI_Boom_IO_2" comment="SERVICE_MODULE_LATCH_UNLATCHED_LAMP" channel="0" bit="9" outType="binary" nominal="0" dort="2" />
+    <datapoint name="boom_hoist_service_module.stowed_LEDLIGHT" owner="UEI_Boom_IO_2" comment="SERVICE_MODULE_MANUAL_HOIST_STOWED_LAMP" channel="0" bit="10" outType="binary" nominal="1" dort="2" />
+    <datapoint name="boom_hoist_service_module.notStowed_LEDLIGHT" owner="UEI_Boom_IO_2" comment="SERVICE_MODULE_MANUAL_HOIST_NOT_STOWED_LAMP" channel="0" bit="11" outType="binary" nominal="0" dort="2" />
+    <datapoint name="BOOM.NozzleDisconnectSolenoid" owner="UEI_Boom_IO_2" comment="BOOM_NOZZLE_IDS_SOLENOID (relay XK9)" channel="0" bit="12" outType="binary" nominal="False" dort="0" />
+    <datapoint name="HYDCAB.BarcsDoorHydSolRetract" owner="UEI_Boom_IO_2" comment="Barcs door hyd Retract @ HPU (relay XK12)" channel="0" bit="13" outType="binary" dort="0" />
+    <datapoint name="HYDCAB.BarcsDoorHydSolExtend" owner="UEI_Boom_IO_2" comment="Barcs door hyd Extend @ HPU (relay XK13)" channel="0" bit="14" outType="binary" dort="0" />
+    <datapoint name="HYDCAB.BoomTelescopePower" owner="UEI_Boom_IO_2" comment="Opens HPU hyd power valve to Boom (relay XK14)" channel="0" bit="15" outType="binary" dort="0" />
+    <datapoint name="310910020.marker_LIGHT" owner="UEI_Boom_IO_2" comment="Applies 28 DCV to boom left marker light (ultraviolet/IR) (relay XK10)" channel="0" bit="17" outType="binary" nominal="True" dort="0" />
+    <datapoint name="310910019.marker_LIGHT" owner="UEI_Boom_IO_2" comment="Applies 28 DCV to boom right marker light (ultraviolet/IR) (relay XK11)" channel="0" bit="18" outType="binary" nominal="True" dort="0" />
+    <datapoint name="HYDCAB.BoomHoistPower" owner="UEI_Boom_IO_2" comment="Opens HPU hyd power valve to Hoist (relay XK15)" channel="0" bit="27" outType="binary" dort="0" />
+    <datapoint name="HYDCAB.CdsHoseReelPower" owner="UEI_Boom_IO_2" comment="Opens HPU hyd power valve to CDS (relay XK16)" channel="0" bit="20" outType="binary" dort="0" />
+    <datapoint name="HYDCAB.MotorPower" owner="UEI_Boom_IO_2" comment="HPU contactor (AC power to hydraulic pump) (relay XK17)" channel="0" bit="21" outType="binary" dort="0" />
+    <datapoint name="HYDCAB.MainFlowValve" owner="UEI_Boom_IO_2" comment="Opens HPU main flow valve (relay XK23)" channel="0" bit="24" outType="binary" dort="0" />
+  </model>
+  <model name="UEI_Boom_IO_3" subsystemType="FastAI" timingConfig="BufferedIO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].113/dev2/ai0:15" lowerInputLimit="-10" upperInputLimit="10" inputMode="diff" tolerance="0.02" />
+    <datapoint name="HOIST.leftCableTension1" owner="UEI_Boom_IO_3" comment="HOIST_ACTUATOR_LEFT_TENSION_PRESS_OUT_1" channel="0" outType="analog" nominal="0" dort="0" />
+    <datapoint name="HOIST.leftCableTension2" owner="UEI_Boom_IO_3" comment="HOIST_ACTUATOR_LEFT_TENSION_PRESS_OUT_2" channel="1" outType="analog" nominal="0" dort="0" />
+    <datapoint name="ar_boom_nozzle.contactDisc_SIGNAL" owner="UEI_Boom_IO_3" comment="Contact signal from Coil found on bottom of nozzle end" channel="2" address="0" outType="momentary" lowerInputLimit="0.05" upperInputLimit="1.50" minTimeMs="3.0" maxTimeMs="11.0"/>
+    <datapoint name="BOOM.InputHydPressure" owner="UEI_Boom_IO_3" comment="Informational" channel="4" outType="analog" nominal="0" dort="0" />
+    <datapoint name="HOIST.InputHydPressure" owner="UEI_Boom_IO_3" comment="Informational" channel="5" outType="analog" nominal="0" dort="0" />
+    <datapoint name="HYDCAB.ManifoldTemperature" owner="UEI_Boom_IO_3" comment="Informational" channel="8" outType="analog" nominal="0" dort="0" />
+    <datapoint name="HYDCAB.ManifoldPressure" owner="UEI_Boom_IO_3" comment="Informational" channel="9" outType="analog" nominal="0" dort="0" />
+  </model>
+  <model name="UEI_Boom_IO_4" subsystemType="AO" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].113/dev3/ao0:1" lowerInputLimit="-10" upperInputLimit="10" inputMode="diff" tolerance="0.2" />
+    <datapoint name="BOOM.telescopeValve" owner="UEI_Boom_IO_4" comment="TELESCOPE_ACTUATOR_DDV_COIL - extension speed drive 0 - 10vdc" channel="0" outType="analog" nominal="0" dort="0" />
+  </model>
+  <model name="UEI_Boom_IO_5" subsystemType="AIX" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].113/dev4/ai0:1" inputMode="diff" tolerance="0.1" exciteV="4.00" exciteF="2920" />
+    <datapoint name="BOOM.centerLength" owner="UEI_Boom_IO_5" comment="BOOM_TELESCOPE_POSITION" channel="0" outType="distance" conv="1.5" nominal="0" dort="1" lowerInputLimit="-10" upperInputLimit="10" collectiveLimit="209" spatialLimit="277" />
+    <datapoint name="HYDCAB.BoomTelescopePower" owner="UEI_Boom_IO_5" comment="Disables channel in case boom disconnected to avoid flood of noise messages" channel="0" outType="channelEnable" />
+    <!-- <datapoint name="BOOM.centerPosAng" owner="UEI_Boom_IO_5" comment="BOOM_ELEVATION_POSITION" channel="1" outType="angle" conv="1" nominal="4.7" dort="2" lowerInputLimit="-10" upperInputLimit="10" collectiveLimit="0" spatialLimit="-20" /> -->
+    <!-- <datapoint name="HYDCAB.BoomTelescopePower" owner="UEI_Boom_IO_5" comment="Disables channel in case boom disconnected to avoid flood of noise messages" channel="1" outType="channelEnable" /> -->
+  </model>
+  <model name="UEI_Boom_IO_6" subsystemType="AIX" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].113/dev5/ai0:1" inputMode="diff" tolerance="0.01" exciteV="7.07" exciteF="2920" />
+    <datapoint name="HOIST.leftDrumPos" owner="UEI_Boom_IO_6" comment="HOIST_ACTUATOR_CABLE_DRUM_POSITION" channel="0" outType="distance" conv="1.5" nominal="0" dort="1" lowerInputLimit="-10" upperInputLimit="10" spatialLimit="60" />
+    <datapoint name="HYDCAB.BoomHoistPower" owner="UEI_Boom_IO_6" comment="Disables channel in case hoist is disconnected to avoid flood of noise messages" channel="0" outType="channelEnable" />
+  </model>
+  <model name="UEI_Boom2_IO_1" subsystemType="CAN" timingConfig="SIMPLE_IO">
+    <channelConfig resourceString="pdna://172.16.[[Room]].114/Dev0/Can0:1" speed="BitsPerSecond125K" />
+    <datapoint name="BOOM.markerLightLeft" owner="UEI_Boom2_IO_1" comment="Marker lights inside boom end - enable LEFT" channel="0" address="9" outType="canbus" nominal="0" dort="1" />
+    <datapoint name="310910020.marker_LIGHT" owner="UEI_Boom2_IO_1" comment="Disables channel when not powered" channel="0" outType="channelEnable" />
+    <datapoint name="BOOM.markerLightRight" owner="UEI_Boom2_IO_1" comment="Marker lights inside boom end - enable RIGHT" channel="1" address="29" outType="canbus" nominal="0" dort="1" />
+    <datapoint name="310910019.marker_LIGHT" owner="UEI_Boom2_IO_1" comment="Disables channel when not powered" channel="1" outType="channelEnable" />
+  </model>
+</UEI>
