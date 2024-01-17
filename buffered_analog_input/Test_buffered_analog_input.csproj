@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="UeiDaqDNet, Version=2.5.0.44594, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\UeiDaqDNet.dll</HintPath>
+      <HintPath>..\..\..\Program Files (x86)\UEI\Framework\DotNet\x64\UeiDaqDNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

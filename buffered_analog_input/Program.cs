@@ -44,6 +44,11 @@ namespace Test_buffered_analog_input
             cubeDeviceArray = new Device[deviceIpList.Count()];
         }
 
+        public void resetTime()
+        {
+            lastTime = DateTime.Now;
+        }
+
         public void setupAnalogInput(string resourceString)
         {
             analogCardResourceString = resourceString;
@@ -257,9 +262,13 @@ namespace Test_buffered_analog_input
 
             string analogCardResourceString = "pdna://172.16.113.113/dev2/ai0:15";
 
-            bool test_without_buffer = false;
+            Console.WriteLine("Use Buffer? (y or n):");
 
-            if (test_without_buffer)
+            string answer = Console.ReadLine();
+
+            answer = answer.ToLower();
+
+            if (answer == "n")
             {
                 test.setupAnalogInput(analogCardResourceString);
             }
@@ -269,6 +278,8 @@ namespace Test_buffered_analog_input
             }
 
             test.startWatchdogs();
+
+            test.resetTime();
 
             string timeStr = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff");
             Console.WriteLine(timeStr + ": Started sending watchdog messages to Cubes.");
@@ -282,7 +293,7 @@ namespace Test_buffered_analog_input
             {
                 Thread.Sleep(100);
 
-                if (test_without_buffer)
+                if (answer == "n")
                 {
                     test.ReadSingleScan();
                 }
